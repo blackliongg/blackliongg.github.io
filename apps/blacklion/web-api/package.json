@@ -3,5 +3,8 @@
   "private": true,
   "scripts": {
     "ri": "npm ci"
+  },
+  "dependencies": {
+    "commonspec": "workspace:commonspec"
   }
 }

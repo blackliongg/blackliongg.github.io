@@ -1,11 +1,11 @@
-## Install
+## Setup repo
 
 We need few packages installed globally.
 
 ### Install with installer
 
 ```
-bash tools/setup.sh
+npm run repo:setup
 ```
 
 ### Manual install
@@ -18,8 +18,11 @@ brew install rustup && rustup-init && rustc --version
 
 # Install packages
 cargo install versio && npm i -g pnpm lerna
+```
 
-# Install repositories with pnpm
+## Install
+
+```
 pnpm install
 ```
 

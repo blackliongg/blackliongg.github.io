@@ -1,0 +1,38 @@
+@import "~bootstrap/scss/functions";
+@import "../common/functions";
+
+// COLORS
+
+$primary: #483698;
+$secondary: #FF6699;
+$tertiary: #B4458D;
+$quaternary: #F59BBB;
+$quinary: #99CCCC;
+$light: #ffffff;
+$dark: #000000;
+
+$brand-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "quaternary": $quaternary,
+  "quinary": $quinary,
+  "light": $light,
+  "dark": $dark
+);
+
+$card-bg: $dark;
+
+// TYPOGRAPHY
+
+@import "./fonts";
+
+//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-Bold.ttf", bold, italic);
+//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-Bold.ttf", bold);
+//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-light.ttf", normal, italic);
+//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-light.ttf", normal);
+
+// CONFIGURE OVERWRITES
+
+$theme-colors: $brand-colors;
+$font-family-base: Geogrotesque;

@@ -1,5 +1,6 @@
 {
   "name": "commonspec",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "ri": "echo ri"

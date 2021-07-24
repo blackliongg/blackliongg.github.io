@@ -46,6 +46,6 @@ projects:
       file: "package.json"
       json: "version"
 
-sizes:
-  use_angular: true
-  fail: ["*"]
+#sizes:
+#  use_angular: true
+#  fail: ["*"]

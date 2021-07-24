@@ -1,0 +1,7 @@
+{
+  "name": "bl-web-static-site",
+  "private": true,
+  "scripts": {
+    "ri": "npm ci"
+  }
+}

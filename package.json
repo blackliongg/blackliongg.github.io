@@ -11,5 +11,8 @@
     "install:rust": "bash ./tools/install-rust.sh",
     "setup:repo": "bash ./tools/setup-repo.sh",
     "install:repo": "pnpm install"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.16.0"
   }
 }

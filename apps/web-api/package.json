@@ -1,0 +1,7 @@
+{
+  "name": "bl-web-api",
+  "private": true,
+  "scripts": {
+    "ri": "npm ci"
+  }
+}

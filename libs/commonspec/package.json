@@ -1,0 +1,7 @@
+{
+  "name": "commonspec",
+  "private": true,
+  "scripts": {
+    "ri": "echo ri"
+  }
+}

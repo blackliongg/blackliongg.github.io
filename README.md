@@ -1,31 +1,27 @@
-## Setup repo
+# WebFrontend
 
-We need few packages installed globally.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
 
-### Install with installer
+## Development server
 
-```
-npm run repo:setup
-```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Manual install
+## Code scaffolding
 
-> We also need to install rust to use versio
-> Ensure to have MacOS developer tools installed.
-> `xcode-select --install`
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```shell
-# Install rust (if not installed)
-brew install rustup && rustup-init && source $HOME/.cargo/env && rustc --version
+## Build
 
-# Install packages
-cargo install versio --locked cargo && npm i -g pnpm lerna
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Install
+## Running unit tests
 
-```
-pnpm install
-```
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

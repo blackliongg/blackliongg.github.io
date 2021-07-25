@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'pro',
+    path: 'progaming',
     loadChildren: () => import('./pages/pro/pro.module').then(m => m.ProModule)
   },
   {

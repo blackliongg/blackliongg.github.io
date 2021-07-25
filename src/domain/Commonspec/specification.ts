@@ -1,17 +1,17 @@
-interface TimePeriod {
+export interface TimePeriod {
   from: Date;
   to: Date;
 }
 
-interface CommonCategory {
+export interface CommonCategory {
   name: string;
   parent?: undefined | CommonCategory;
   subCategories?: CommonCategory[];
   commons?: Common[];
 }
 
-interface Common {
-  spec?: CommonSpec;
+export interface Common {
+  spec: Specification;
 
   /**
    * values need to correspondent
@@ -22,15 +22,16 @@ interface Common {
   parentCommons?: undefined | Common;
 
   name: string;
+  id: string;
   version?: string;
   validFor?: undefined | TimePeriod;
   isBundle?: boolean;
   lifecycleStatus?: string;
-  lastUpdate?: undefined | Date;
+  lastUpdate?: undefined | DateConstructor;
   accessRights?: AccessRights[];
 }
 
-interface CommonSpec {
+export interface Specification {
   name?: string;
   id: string;
   version?: string;
@@ -41,7 +42,7 @@ interface CommonSpec {
   commonSpecCharValueUse?: undefined | CommonSpecCharValueUse[];
 }
 
-interface CommonSpecCharValueUse {
+export interface CommonSpecCharValueUse {
   name?: string;
   id: string;
   valueType?: string;// a type could be string, whereas a mimetype needs to be a correct mimetype
@@ -50,8 +51,9 @@ interface CommonSpecCharValueUse {
   commonSpecCharValue?: undefined | CommonSpecCharValue;
 }
 
-interface CommonSpecCharValue {
+export interface CommonSpecCharValue {
   isDefault?: boolean;
+  isResource?: boolean;
 
   /**
    *   allow or disallow generated content from any source with rules based on CommonSpecCharValueUse
@@ -66,14 +68,18 @@ interface CommonSpecCharValue {
   valueTo?: any;
   valueRegex?: string;
   value?: any;
+  valueResource?: undefined | CommonSpecCharValueResource;
 }
 
-interface CommonCharValueUse {
+export interface CommonCharValueUse {
   commonSpecCharValueUse: CommonSpecCharValueUse;
 
   /**
    * Needs to correspondent to a subset of values of
    * CommonCharValueUse.commonSpecCharValueUse
+   *
+   * Values are always a real list if maxCardinality > 1 or not defined
+   * Values are always single values if maxCardinality = 1
    */
   commonCharValues: CommonCharValue[];
 }
@@ -81,14 +87,14 @@ interface CommonCharValueUse {
 /**
  * Needs to have either value or valueResource.
  */
-interface CommonCharValue {
+export interface CommonCharValue {
   isDefault?: boolean;
   hasResource?: boolean;
   value?: any;
   valueResource?: undefined |  CommonCharValueResource;
 }
 
-interface CommonCharValueResource {
+export interface CommonCharValueResource {
   name?: string;
   byte?: number;
   mimeType?: string;
@@ -100,7 +106,13 @@ interface CommonCharValueResource {
   accessRights?: AccessRights[];
 }
 
-interface AccessRights {
+export interface CommonSpecCharValueResource {
+  name?: string;
+  maxBytes?: number;
+  mimeTypes?: string;
+}
+
+export interface AccessRights {
   name: string;
   id: string;
 }

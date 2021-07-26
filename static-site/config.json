@@ -1,0 +1,29 @@
+{
+  "rootSrc": "../",
+  "pages": [
+    {
+      "source": "docs/index.html",
+      "target": "docs/index.html",
+      "var": {
+        "title": "Black Lion",
+        "microformat": "src/app/black-lion/microformat/home.html"
+      }
+    },
+    {
+      "source": "docs/index.html",
+      "target": "docs/home.html",
+      "var": {
+        "title": "Black Lion",
+        "microformat": "src/app/black-lion/microformat/home.html"
+      }
+    },
+    {
+      "source": "docs/index.html",
+      "target": "docs/progaming.html",
+      "var": {
+        "title": "Progaming at Black Lion",
+        "microformat": "src/app/black-lion/microformat/progaming.html"
+      }
+    }
+  ]
+}

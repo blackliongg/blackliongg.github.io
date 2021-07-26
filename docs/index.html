@@ -10,14 +10,37 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "SportsOrganization",
     "name": "Black Lion",
+    "url": "https://blacklion.gg/home",
+    "slogan": "Diverse Esports",
+    "logo": "/assets/images/BlackLion_Logo_black_brush_tagline.png",
+    "sameAs": [
+      "https://twitter.com/blackliongg",
+      "https://twitch.com/blackliongg",
+      "https://instagram.com/blackliongg"
+    ],
+    "sport": "League of Legends",
     "description": "Wir gehen neue Wege und fokussieren uns auf unsere Kernthemen: Athlete First, Diversität und Inklusion. Als einen Teil unserer Identität tragen wir die Werte Offenheit, Ehrlichkeit und Vertrauen in unseren Herzen!",
-    "significantLinks": [
-      "/pride/diversity",
-      "/pride/athletes-first",
-      "/progaming"
-    ]
+    "event": {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Prime League",
+      "subEvent": {
+        "@type": "SportsEvent",
+        "@id": "https://www.primeleague.gg/leagues/matches/783138-black-lion-vs-playing-ducks",
+        "name": "Spieltag 7",
+        "hometeam": {
+          "@type": "SportsTeam",
+          "name": "Black Lion"
+        },
+        "awayteam": {
+          "@type": "SportsTeam",
+          "name": "Playing Ducks"
+        },
+        "sport": "League of Legends"
+      }
+    }
   }
 </script>
 

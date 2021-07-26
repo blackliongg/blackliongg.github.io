@@ -29,7 +29,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "progaming.html"
+              "src/progaming.html"
             ],
             "styles": [
               "src/styles.scss"

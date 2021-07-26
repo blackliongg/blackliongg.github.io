@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./black-lion/athletes/athletes.module').then(m => m.AthletesModule)
   },
   {
+    path: 'talented',
+    loadChildren: () => import('./black-lion/talented/talented.module').then(m => m.TalentedModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./black-lion/about/about.module').then(m => m.AboutModule)
   },

@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'progaming',
-    loadChildren: () => import('./pages/pro/pro.module').then(m => m.ProModule)
+    loadChildren: () => import('./black-lion/athletes/athletes.module').then(m => m.AthletesModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./black-lion/entrypoint/entrypoint-routing.module').then(m => m.EntrypointRoutingModule)
   },
   {
     path: '**',

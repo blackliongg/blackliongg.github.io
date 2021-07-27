@@ -23,14 +23,25 @@ $brand-colors: (
 
 $card-bg: $dark;
 
+$brand-pattern: (
+  "primary": '/assets/images/BlackLion_Brandpattern_01_black.png',
+  "secondary": '/assets/images/BlackLion_Brandpattern_01_black.png',
+  "tertiary": '/assets/images/BlackLion_Brandpattern_01_black.png',
+  "quaternary": '/assets/images/BlackLion_Brandpattern_01_black.png',
+  "quinary": '/assets/images/BlackLion_Brandpattern_01_petrol.png',
+  "light": '/assets/images/BlackLion_Brandpattern_01_black.png',
+  "dark": '/assets/images/BlackLion_Brandpattern_01_black.png'
+);
+
+@each $name, $image in $brand-pattern {
+  .bg-pattern-#{$name} {
+    background: url($image);
+  };
+}
+
 // TYPOGRAPHY
 
 @import "./fonts";
-
-//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-Bold.ttf", bold, italic);
-//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-Bold.ttf", bold);
-//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-light.ttf", normal, italic);
-//@include font-face("Geogrotesque", "/src/assets/fonts/GeogrotesqueCyr-light.ttf", normal);
 
 // CONFIGURE OVERWRITES
 

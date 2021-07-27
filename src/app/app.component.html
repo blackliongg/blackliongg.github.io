@@ -9,20 +9,12 @@
         <img src="/assets/images/BlackLion_Logo_white_clean_oneliner.png" alt=""
           class="d-none d-lg-inline" style="width: 100%; max-width: 240px;">
       </a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link link-light text-uppercase" aria-current="page" [routerLink]="['/progaming']">Pro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-light text-uppercase" [routerLink]="['/talented']">Nachwuchs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-light text-uppercase" [routerLink]="['/about']">Community</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline">
-          <a class="nav-link link-secondary fw-bold" href="#">#UnleashUrLion</a>
-        </li>
-      </ul>
+      <div class="col-auto">
+        <a class="text-uppercase padding-25 btn btn-outline-light border-none" aria-current="page" [routerLink]="['/progaming']">Pro</a>
+        <a class="text-uppercase padding-25 btn btn-outline-light border-none" [routerLink]="['/talented']">Nachwuchs</a>
+        <a class="text-uppercase padding-25 btn btn-outline-light border-none" [routerLink]="['/about']">Community</a>
+        <a class="fw-bold padding-25 btn btn-outline-secondary border-none d-none d-sm-inline" href="#">#UnleashUrLion</a>
+      </div>
     </div>
   </nav>
 </header>
@@ -46,24 +38,24 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-md-4">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item list-group-item-action bg-dark text-white fw-bold">Esports</div>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Progaming</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Academy</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Performance center</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Talent Scouting</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">usw</a>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="d-grid gap-0">
+          <div class="fw-bold text-uppercase btn text-start disabled text-white">Esports</div>
+          <a href="#" class="btn btn-outline-light border-none text-start">Progaming</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">Academy</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">Performance center</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">Talent Scouting</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">usw</a>
         </div>
       </div>
-      <div class="col-12 col-md-4">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item list-group-item-action bg-dark text-white fw-bold">About</div>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Impressum</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Datenschutz</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">History</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Team</a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">usw</a>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="d-grid gap-0">
+          <div class="fw-bold text-uppercase btn text-start disabled text-white">About</div>
+          <a href="#" class="btn btn-outline-light border-none text-start">Impressum</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">Datenschutz</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">History</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">Team</a>
+          <a href="#" class="btn btn-outline-light border-none text-start">usw</a>
         </div>
       </div>
       <div class="col-12 col-md-4 text-center text-md-end">

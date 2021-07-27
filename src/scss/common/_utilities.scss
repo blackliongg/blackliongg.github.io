@@ -16,3 +16,20 @@ $utilities: map-merge(
     ),
   )
 );
+
+.border-none {
+  border: none !important;
+}
+
+$padding: (
+  "25": 0.25rem,
+  "50": 0.5rem,
+  "75": 0.75rem,
+  "100": 0.100rem,
+);
+
+@each $size, $value in $padding {
+  .padding-#{$size} {
+    padding: $value;
+  }
+}

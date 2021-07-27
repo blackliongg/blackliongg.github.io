@@ -3,7 +3,7 @@
     <div [class]="buildContentClasses(keyVisual)">
       <ng-content></ng-content>
     </div>
-    <div *ngIf="keyVisual" class="col-12 col-md-7 col-lg-6 text-end text-lg-center">
+    <div *ngIf="keyVisual" class="col-12 col-md-4 col-lg-5 text-end text-lg-center">
       <img class="img-fluid" [src]="keyVisual" [alt]="keyVisualAlt">
     </div>
   </div>

@@ -25,7 +25,7 @@ export class HeroComponent implements OnInit {
     const classes: string[] = ['col-12', 'text-center', 'text-md-start'];
 
     if(!!keyVisual) {
-      return classes.concat(['col-md-5', 'col-lg-6']);
+      return classes.concat(['col-md-8', 'col-lg-7']);
     }
 
     return classes;

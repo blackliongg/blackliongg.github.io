@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommunityPageComponent } from './community-page/community-page.component';
+import {CommunityRoutingModule} from './community-routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { CommunityPageComponent } from './community-page/community-page.componen
     CommunityPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CommunityRoutingModule
   ]
 })
 export class CommunityModule { }

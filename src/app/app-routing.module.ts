@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./black-lion/talented/talented.module').then(m => m.TalentedModule)
   },
   {
+    path: 'community',
+    loadChildren: () => import('./black-lion/community/community.module').then(m => m.CommunityModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./black-lion/about/about.module').then(m => m.AboutModule)
   },

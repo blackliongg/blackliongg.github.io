@@ -63,9 +63,7 @@ export interface Thing extends Id,
   AccessRightsManagement,
   ValidFor,
   LifecycleStatus,
-  Common,
-  ActionManagement
-{
+  Common {
   specification: Specification;
 
   /**
@@ -83,7 +81,8 @@ export interface Specification extends Id,
   Timestamps,
   ValidFor,
   LifecycleStatus,
-  Common {
+  Common,
+  ActionManagement {
   isBundle?: boolean;
   specificationCharacteristicValueUse?: undefined | SpecificationCharacteristicValueUse[];
 }

@@ -1,11 +1,11 @@
-import {CommonCharValueResource} from '../specification';
+import {CharacteristicValueResource, CharacteristicValueUse} from '../specification';
 
 export const simpleCharValueUse = (
   specCharValueUseId: string,
   values: any[]
-) => ({
+): CharacteristicValueUse => ({
   commonSpecCharValueUse: {
-    id: specCharValueUseId
+    '@id': specCharValueUseId
   },
   commonCharValues: values.map(
     (value: any) => ({
@@ -16,14 +16,14 @@ export const simpleCharValueUse = (
 
 export const resourceCharValueUse = (
   specCharValueUseId: string,
-  resources: CommonCharValueResource[]
-) => ({
+  resources: CharacteristicValueResource[]
+): CharacteristicValueUse => ({
   commonSpecCharValueUse: {
-    id: specCharValueUseId
+    '@id': specCharValueUseId
   },
   commonCharValues: resources.map(
-    (valueResource: any) => ({
-      valueResource
+    (characteristicValueResource: any) => ({
+      characteristicValueResource
     })
   )
 });

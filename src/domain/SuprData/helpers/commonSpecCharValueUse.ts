@@ -1,19 +1,19 @@
-import {CommonSpecCharValueResource, CommonSpecCharValueUse} from '../specification';
+import {SpecificationCharacteristicValueResource, SpecificationCharacteristicValueUse} from '../specification';
 
 export const specCharValueGenerator = (
-  id: string, name?: string, valueType?: string, partialData?: Partial<CommonSpecCharValueUse>
-): CommonSpecCharValueUse => Object.assign(partialData ?? {}, {id, name, valueType});
+  id: string, name?: string, valueType?: string, partialData?: Partial<SpecificationCharacteristicValueUse>
+): SpecificationCharacteristicValueUse => Object.assign(partialData ?? {}, {id, name, valueType});
 
 export const specCharValueCardinalityDecorator = (
-  spec: CommonSpecCharValueUse, cardinality: {
+  spec: SpecificationCharacteristicValueUse, cardinality: {
     minCardinality: number,
     maxCardinality: number
   }
-): CommonSpecCharValueUse => Object.assign({}, spec, cardinality);
+): SpecificationCharacteristicValueUse => Object.assign({}, spec, cardinality);
 
 export const booleanSpecCharValue = (
   id: string, name?: string
-): CommonSpecCharValueUse => specCharValueCardinalityDecorator(
+): SpecificationCharacteristicValueUse => specCharValueCardinalityDecorator(
   specCharValueGenerator(
     id,
     name,
@@ -30,7 +30,7 @@ export const booleanSpecCharValue = (
 
 export const enumSpecCharValue = (
   id: string, types: string[], name?: string
-): CommonSpecCharValueUse => specCharValueCardinalityDecorator(
+): SpecificationCharacteristicValueUse => specCharValueCardinalityDecorator(
   specCharValueGenerator(
     id,
     name,
@@ -49,7 +49,7 @@ export const enumSpecCharValue = (
 
 export const stringSpecCharValue = (
   id: string, name?: string
-): CommonSpecCharValueUse => specCharValueGenerator(
+): SpecificationCharacteristicValueUse => specCharValueGenerator(
   id,
   name,
   'string',
@@ -62,8 +62,8 @@ export const stringSpecCharValue = (
   }
 );
 export const resourceSpecCharValue = (
-  id: string, name?: string, config?: CommonSpecCharValueResource
-): CommonSpecCharValueUse => specCharValueGenerator(
+  id: string, name?: string, config?: SpecificationCharacteristicValueResource
+): SpecificationCharacteristicValueUse => specCharValueGenerator(
   id,
   name,
   'resource',

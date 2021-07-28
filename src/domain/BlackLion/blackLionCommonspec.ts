@@ -1,19 +1,21 @@
-import {AccessRights, Common, CommonCategory, Specification} from '../Commonspec/specification';
+import {AccessRights, Thing, Category, Specification} from '../SuprData/specification';
 import {
   booleanSpecCharValue,
   enumSpecCharValue, resourceSpecCharValue,
   stringSpecCharValue
-} from '../Commonspec/helpers/commonSpecCharValueUse';
-import {resourceCharValueUse, simpleCharValueUse} from '../Commonspec/helpers/commonCharValueUse';
+} from '../SuprData/helpers/commonSpecCharValueUse';
+import {resourceCharValueUse, simpleCharValueUse} from '../SuprData/helpers/commonCharValueUse';
+import {model} from '../SuprData/helpers/model';
 
 const accessRights: AccessRights[] = [
-  {name: 'public', id: 'PUBLIC'}
+  {name: 'public', '@id': 'PUBLIC'}
 ]
+
 
 const PAGE: Specification = {
   name: 'Common page',
-  id: 'common/page',
-  commonSpecCharValueUse: [
+  '@id': 'common/page',
+  specificationCharacteristicValueUse: [
     stringSpecCharValue('common/page/RENDER_BEHAVIOUR', 'How to render page components'),
     stringSpecCharValue('common/page/LINK', 'How to access page'),
     stringSpecCharValue('common/page/NAVIGATION_AREA', 'logo'),
@@ -26,8 +28,8 @@ const PAGE: Specification = {
 
 const PAGE_COMPONENT: Specification = {
   name: 'Common page key component',
-  id: 'common/page_component',
-  commonSpecCharValueUse: [
+  '@id': 'common/page_component',
+  specificationCharacteristicValueUse: [
     stringSpecCharValue('common/page_component/TITLE', 'Title'),
     stringSpecCharValue('common/page_component/SUBTITLE', 'Subtitle'),
     stringSpecCharValue('common/page_component/CONTENT', 'Content'),
@@ -42,8 +44,8 @@ const PAGE_COMPONENT: Specification = {
 }
 const PAGE_KEY_COMPONENT: Specification = {
   name: 'Common page key component',
-  id: 'common/page_key_component',
-  commonSpecCharValueUse: [
+  '@id': 'common/page_key_component',
+  specificationCharacteristicValueUse: [
     stringSpecCharValue('common/page_key_component/KEY_TITLE', 'Key Title'),
     stringSpecCharValue('common/page_key_component/KEY_SUBTITLE', 'Key Subtitle'),
     stringSpecCharValue('common/page_key_component/KEY_CONTENT', 'Key Content'),
@@ -51,106 +53,68 @@ const PAGE_KEY_COMPONENT: Specification = {
     resourceSpecCharValue('common/page_key_component/KEY_BACKGROUND', 'Key content background'),
   ]
 }
-const PLAYER_COMPONENT: Specification = {
+const ATHLETE_COMPONENT: Specification = {
   name: 'Player page component',
-  id: 'player/component',
-  commonSpecCharValueUse: [
+  '@id': 'player/component',
+  specificationCharacteristicValueUse: [
     stringSpecCharValue('common/page_key_component/PLAYER_NAME', 'Player name'),
     resourceSpecCharValue('common/page_key_component/PLAYER_PICTURE', 'Player picture'),
     stringSpecCharValue('common/page_key_component/ROLE_NAME', 'Role name'),
     resourceSpecCharValue('common/page_key_component/ROLE_SYMBOL', 'Role symbol'),
     resourceSpecCharValue('common/page_key_component/ROLE_PATTERN', 'Role pattern'),
-    {
-      name: 'player name',
-      id: 'player/component/PLAYER_NAME',
-      valueType: 'string',
-      minCardinality: 0,
-      maxCardinality: 1,
-      commonSpecCharValue: {
-        visible: true,
-        producible: false,
-        editable: false
-      }
-    },
-    {
-      name: 'player picture',
-      id: 'player/component/PLAYER_PICTURE',
-      valueType: 'string',
-      minCardinality: 0,
-      maxCardinality: 1,
-      commonSpecCharValue: {
-        visible: true,
-        producible: false,
-        editable: false
-      }
-    },
-    {
-      name: 'player role',
-      id: 'player/component/ROLE_NAME',
-      valueType: 'string',
-      minCardinality: 0,
-      maxCardinality: 1,
-      commonSpecCharValue: {
-        visible: true,
-        producible: false,
-        editable: false
-      }
-    },
-    {
-      name: 'player role symbol',
-      id: 'player/component/ROLE_SYMBOL',
-      valueType: 'list',
-      minCardinality: 0,
-      maxCardinality: 1,
-      commonSpecCharValue: {
-        visible: true,
-        producible: false,
-        editable: false
-      }
-    },
-    {
-      name: 'player role pattern',
-      id: 'player/component/ROLE_PATTERN',
-      valueType: 'list',
-      minCardinality: 0,
-      maxCardinality: 1,
-      commonSpecCharValue: {
-        visible: true,
-        producible: false,
-        editable: false
-      }
-    }
   ]
 
 }
 
-const DE: Common[] = [
-  {
+const pageThingBuilder = model<Thing>({
+  '@context': 'WebSite',
+  '@type': 'WebPage',
+  '@version': '1',
+  specification: PAGE,
+  accessRights
+});
+
+const pageComponentThingBuilder = model<Thing>({
+  '@context': 'WebSite',
+  '@type': 'WebPage',
+  '@version': '1',
+  specification: PAGE_COMPONENT,
+  accessRights
+});
+
+const pageKeyComponentThingBuilder = model<Thing>({
+  '@context': 'WebSite',
+  '@type': 'WebPage',
+  '@version': '1',
+  specification: PAGE_KEY_COMPONENT,
+  accessRights
+});
+
+const playerThingBuilder = model<Thing>({
+  '@context': 'SportsTeam',
+  '@baseType': 'Person',
+  '@type': 'Athlete',
+  '@version': '1',
+  specification: ATHLETE_COMPONENT,
+  accessRights
+});
+
+const DE: Thing[] = [
+  pageThingBuilder({
     name: 'Homepage',
-    id: 'home',
-    spec: PAGE,
-    commonCharValueUse: [
-      {
-        commonSpecCharValueUse: {
-          id: 'common/page/NAVIGATION_ITEM_HIDE'
-        },
-        commonCharValues: [
-          {
-            value: 1
-          }
-        ]
-      }
+    '@id': 'home',
+    characteristicValueUse: [
+      simpleCharValueUse('common/page/NAVIGATION_ITEM_HIDE', [1]),
     ],
-  },
-  {
+  }),
+  pageThingBuilder({
     name: 'pro',
-    id: 'pro',
-    subCommons: [
-      {
+    '@id': 'pro',
+    subThings: [
+      pageKeyComponentThingBuilder({
         name: 'Key component',
-        id: 'pro/key',
-        spec: PAGE_KEY_COMPONENT,
-        commonCharValueUse: [
+        '@id': 'pro/key',
+        characteristicValueUse: [
           simpleCharValueUse('common/page_key_component/KEY_TITLE', ['progaming']),
           simpleCharValueUse('common/page_key_component/KEY_SUBTITLE', ['Packende Team-Fights. Attraktive Taktik. Fesselnde Spiele.']),
           resourceCharValueUse('common/page_key_component/KEY_CONTENT', [{
@@ -166,15 +130,15 @@ const DE: Common[] = [
             contentLink: '/assets/images/BlackLion_Brandpattern_01_black.png'
           }]),
         ],
-      },
-      {
+      }),
+      pageComponentThingBuilder({
         name: 'Athletes',
-        id: 'pro/athletes',
-        spec: PAGE_COMPONENT,
-        commonCharValueUse: [
+        '@id': 'pro/athletes',
+        specification: PAGE_COMPONENT,
+        characteristicValueUse: [
           {
             commonSpecCharValueUse: {
-              id: 'common/page_component/TITLE',
+              '@id': 'common/page_component/TITLE',
             },
             commonCharValues: [
               {
@@ -184,7 +148,7 @@ const DE: Common[] = [
           },
           {
             commonSpecCharValueUse: {
-              id: 'common/page_component/CAN_RENDER_SUB_COMMON',
+              '@id': 'common/page_component/CAN_RENDER_SUB_COMMON',
             },
             commonCharValues: [
               {
@@ -194,7 +158,7 @@ const DE: Common[] = [
           },
           {
             commonSpecCharValueUse: {
-              id: 'common/page_component/RENDER_SUB_COMMON_ALGORITHM',
+              '@id': 'common/page_component/RENDER_SUB_COMMON_ALGORITHM',
             },
             commonCharValues: [
               {
@@ -203,12 +167,11 @@ const DE: Common[] = [
             ]
           },
         ],
-        subCommons: [
-          {
+        subThings: [
+          playerThingBuilder({
             name: 'Ryoshi',
-            id: 'pro/athletes/ryoshi',
-            spec: PLAYER_COMPONENT,
-            commonCharValueUse: [
+            '@id': 'pro/athletes/ryoshi',
+            characteristicValueUse: [
               simpleCharValueUse('player/component/PLAYER_NAME', ['progaming']),
               simpleCharValueUse('player/component/ROLE_SUBTITLE', ['Packende Team-Fights. Attraktive Taktik. Fesselnde Spiele.']),
               resourceCharValueUse('player/component/PLAYER_CONTENT', [{
@@ -222,75 +185,16 @@ const DE: Common[] = [
               resourceCharValueUse('player/component/ROLE_BACKGROUND', [{
                 name: 'bl_pattern_black',
                 contentLink: '/assets/images/BlackLion_Brandpattern_01_black.png'
-              }]),
-              {
-                commonSpecCharValueUse: {
-                  id: 'player/component/PLAYER_NAME',
-                },
-                commonCharValues: [
-                  {
-                    value: 'Ryoshi'
-                  }
-                ]
-              },
-              {
-                commonSpecCharValueUse: {
-                  id: 'player/component/ROLE_NAME',
-                },
-                commonCharValues: [
-                  {
-                    value: 'Midlane'
-                  }
-                ]
-              },
-              {
-                commonSpecCharValueUse: {
-                  id: 'player/component/PLAYER_PICTURE',
-                },
-                commonCharValues: [
-                  {
-                    valueResource: {
-                      name: 'urage',
-                      contentLink: '/assets/images/urage-logo.png'
-                    }
-                  }
-                ]
-              },
-              {
-                commonSpecCharValueUse: {
-                  id: 'player/component/ROLE_SYMBOL',
-                },
-                commonCharValues: [
-                  {
-                    valueResource: {
-                      name: 'Black Lion',
-                      contentLink: '/assets/images/BlackLion_Logo_white_clean_monochrom.png'
-                    }
-                  }
-                ]
-              },
-              {
-                commonSpecCharValueUse: {
-                  id: 'player/component/ROLE_PATTERN',
-                },
-                commonCharValues: [
-                  {
-                    valueResource: {
-                      name: 'bl_pattern_black',
-                      contentLink: '/assets/images/BlackLion_Brandpattern_01_black.png'
-                    }
-                  }
-                ]
-              }
+              }])
             ],
-          },
+          }),
         ]
-      }
+      })
     ]
-  }
+  })
 ]
 
-const categories: CommonCategory = {
+export const categories: Category = {
   name: 'Black Lion',
   subCategories: [
     {
@@ -298,7 +202,7 @@ const categories: CommonCategory = {
     },
     {
       name: 'DE',
-      commons: DE
+      things: DE
     }
   ]
 }

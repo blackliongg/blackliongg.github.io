@@ -24,6 +24,30 @@
         "title": "Progaming at Black Lion",
         "microdata": "src/app/black-lion/microdata/progaming.html"
       }
+    },
+    {
+      "source": "docs/index.html",
+      "target": "docs/community.html",
+      "var": {
+        "title": "RoarTogether - The Black Lion Community",
+        "microdata": "src/app/black-lion/microdata/community.html"
+      }
+    },
+    {
+      "source": "docs/index.html",
+      "target": "docs/about.html",
+      "var": {
+        "title": "About Black Lion",
+        "microdata": "src/app/black-lion/microdata/about.html"
+      }
+    },
+    {
+      "source": "docs/index.html",
+      "target": "docs/talented.html",
+      "var": {
+        "title": "UnleashUrLion - The Black Lion youngster program",
+        "microdata": "src/app/black-lion/microdata/talented.html"
+      }
     }
   ]
 }

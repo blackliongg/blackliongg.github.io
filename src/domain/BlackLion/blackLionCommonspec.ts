@@ -1,11 +1,14 @@
-import {AccessRights, Thing, Category, Specification} from '../SuprData/specification';
+import {AccessRights} from '@suprdata/spec/dist/lib/AccessRights';
+import {Specification} from '@suprdata/spec/dist/lib/Specification';
 import {
   booleanSpecCharValue,
   enumSpecCharValue, resourceSpecCharValue,
   stringSpecCharValue
-} from '../SuprData/helpers/commonSpecCharValueUse';
-import {resourceCharValueUse, simpleCharValueUse} from '../SuprData/helpers/commonCharValueUse';
-import {model} from '../SuprData/helpers/model';
+} from '@suprdata/spec/dist/lib/helpers/specCharValueUse';
+import {model, typed} from '@suprdata/spec/dist/lib/helpers/model';
+import {Thing} from '@suprdata/spec/dist/lib/Thing';
+import {resourceCharValueUse, simpleCharValueUse} from '@suprdata/spec/dist/lib/helpers/charValueUse';
+import {Category} from '@suprdata/spec/dist/lib/Category';
 
 const accessRights: AccessRights[] = [
   {name: 'public', '@id': 'PUBLIC'}
@@ -66,29 +69,26 @@ const ATHLETE_COMPONENT: Specification = {
 
 }
 
-const pageThingBuilder = model<Thing>({
+const webPageType = typed<Thing>('WebPage', {
   '@context': 'WebSite',
   '@type': 'WebPage',
   '@version': '1',
+})
+
+const pageThingBuilder = model<Thing>(webPageType({
   specification: PAGE,
   accessRights
-});
+}));
 
-const pageComponentThingBuilder = model<Thing>({
-  '@context': 'WebSite',
-  '@type': 'WebPage',
-  '@version': '1',
+const pageComponentThingBuilder = model<Thing>(webPageType({
   specification: PAGE_COMPONENT,
   accessRights
-});
+}));
 
-const pageKeyComponentThingBuilder = model<Thing>({
-  '@context': 'WebSite',
-  '@type': 'WebPage',
-  '@version': '1',
+const pageKeyComponentThingBuilder = model<Thing>(webPageType({
   specification: PAGE_KEY_COMPONENT,
   accessRights
-});
+}));
 
 const playerThingBuilder = model<Thing>({
   '@context': 'SportsTeam',

@@ -8,5 +8,6 @@ import {NgcCookieConsentService} from 'ngx-cookieconsent';
 })
 export class AppComponent {
   constructor(private ccService: NgcCookieConsentService) {
+    this.ccService.clearStatus()
   }
 }

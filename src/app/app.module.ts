@@ -20,6 +20,14 @@ const cookieConfig: NgcCookieConsentConfig = {
   },
   theme: 'edgeless',
   type: 'opt-out',
+  elements:{
+    messagelink: `
+    <div id="cookieconsent:desc" class="cc-message">{{message}}<br>
+      <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{cookiePolicyHref}}" target="_blank" rel="noopener">{{cookiePolicyLink}}</a> und
+      <a aria-label="learn more about our privacy policy" tabindex="1" class="cc-link" href="{{privacyPolicyHref}}" rel="noopener">{{privacyPolicyLink}}</a>
+    </div>
+    `,
+  },
   content: {
     header: 'Cookies werden auf dieser Webseite genutzt!',
     message: 'Wir verwenden Cookies um Inhalte und Anzeigen zu personalisieren, um Social-Media-Funktionen zur Verfügung zu stellen und unseren Traffic zu analysieren. Wir teilen auch Informationen über Ihre Nutzung unserer Website mit unseren Social Media-, Werbe- und Analysepartnern.',
@@ -27,7 +35,13 @@ const cookieConfig: NgcCookieConsentConfig = {
     allow: 'Cookies zulassen',
     deny: 'Ablehnen',
     link: 'Mehr Details',
-    policy: 'Cookierichtlinie anzeigen'
+    policy: 'Cookierichtlinie anzeigen',
+
+    cookiePolicyLink: 'Mehr über Cookies erfahren',
+    cookiePolicyHref: 'https://www.cookiesandyou.com/',
+
+    privacyPolicyLink: 'Datenschutz und Cookierichtlinie anpassen',
+    privacyPolicyHref: environment.protocol + '://' + environment.domain + '/home/privacy-policy',
   }
 };
 

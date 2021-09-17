@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ImprintPageComponent } from './imprint-page/imprint-page.component';
 import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy-page.component';
 import {EntrypointRoutingModule} from './entrypoint-routing.module';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -15,7 +16,12 @@ import {EntrypointRoutingModule} from './entrypoint-routing.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     EntrypointRoutingModule
+  ],
+  exports: [
+    RouterModule,
+    HomePageComponent
   ]
 })
 export class EntrypointModule { }

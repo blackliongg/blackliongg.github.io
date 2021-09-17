@@ -1,4 +1,5 @@
 const fs = require('fs');
+const fse = require('fs-extra');
 const Mustache = require('mustache');
 
 class PageConfig {
@@ -70,7 +71,7 @@ const pathBuilder = (srcPath) =>
  */
 const generateFiles = (source, target) => {
   if (source) {
-    fs.copyFileSync(source, target);
+    fse.copySync(source, target);
   } else {
     fs.writeFileSync(target, '');
   }

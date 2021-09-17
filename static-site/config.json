@@ -48,6 +48,14 @@
         "title": "UnleashUrLion - The Black Lion youngster program",
         "microdata": "src/app/black-lion/microdata/talented.html"
       }
+    },
+    {
+      "source": "docs/index.html",
+      "target": "docs/imprint.html",
+      "var": {
+        "title": "Impressum",
+        "microdata": "src/app/black-lion/microdata/imprint.html"
+      }
     }
   ]
 }

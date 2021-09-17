@@ -56,6 +56,14 @@
         "title": "Impressum",
         "microdata": "src/app/black-lion/microdata/imprint.html"
       }
+    },
+    {
+      "source": "docs/index.html",
+      "target": "docs/privacy-policy.html",
+      "var": {
+        "title": "Datenschutz",
+        "microdata": "src/app/black-lion/microdata/privacy-policy.html"
+      }
     }
   ]
 }

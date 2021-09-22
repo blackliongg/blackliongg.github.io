@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgcCookieConsentService} from 'ngx-cookieconsent';
 
 @Component({
   selector: 'app-privacy-policy-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacyPolicyPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ccService: NgcCookieConsentService) { }
 
   ngOnInit(): void {
+  }
+
+  clearCookieStatus() {
+    this.ccService.clearStatus();
+    window.location.reload();
   }
 
 }

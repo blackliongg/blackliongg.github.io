@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  protocol: 'http',
+  domain: 'localhost:4200',
+  cookieConsent: {
+    cookieDomain: 'localhost'
+  }
 };
 
 /*

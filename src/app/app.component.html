@@ -14,7 +14,7 @@
         <a class="text-uppercase padding-25 btn btn-outline-light border-none" [routerLink]="['/talented']">Nachwuchs</a>
         <a class="text-uppercase padding-25 btn btn-outline-light border-none" [routerLink]="['/community']">Community</a>
         <a class="fw-bold padding-25 btn btn-outline-secondary border-none d-none d-sm-inline" target="_blank" href="https://discord.gg/ghsJ3PFFha">#UnleashUrLion</a>
-      </div> 
+      </div>
     </div>
   </nav>
 </header>
@@ -22,7 +22,7 @@
 <div class="bg-white section--spacing">
   <div class="container">
     <div class="list-group list-group-flush">
-      <a href="#" class="list-group-item list-group-item-action text-secondary display-1 text-center">#UnleashUrLion
+      <a target="_blank" href="https://discord.gg/ghsJ3PFFha" class="list-group-item list-group-item-action text-secondary display-1 text-center">#UnleashUrLion
       </a>
     </div>
   </div>
@@ -42,20 +42,18 @@
         <div class="d-grid gap-0">
           <div class="fw-bold text-uppercase btn text-start disabled text-white">Esports</div>
           <a class="btn btn-outline-light border-none text-start" [routerLink]="'/progaming'">Progaming</a>
-          <a class="btn btn-outline-light border-none text-start">Academy</a>
-          <a class="btn btn-outline-light border-none text-start">Nachwuchsleistungszentrum</a>
-          <a class="btn btn-outline-light border-none text-start">Athletes first</a>
-          <a class="btn btn-outline-light border-none text-start">Diversity &amp; Inklusion</a>
+          <a class="btn btn-outline-light border-none text-start" [routerLink]="'/talented'">Nachwuchs</a>
+          <a class="btn btn-outline-light border-none text-start" [routerLink]="'/community'">Community</a>
+          <a class="btn btn-outline-secondary fw-bold border-none text-start" target="_blank" href="https://discord.gg/ghsJ3PFFha">#UnleashUrLion</a>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <div class="d-grid gap-0">
           <div class="fw-bold text-uppercase btn text-start disabled text-white">Black Lion</div>
           <a class="btn btn-outline-light border-none text-start" [routerLink]="'/about'">Über uns</a>
-          <a class="btn btn-outline-light border-none text-start">Partner</a>
-          <a class="btn btn-outline-light border-none text-start">Werte &amp; Konzepte</a>
-          <a class="btn btn-outline-light border-none text-start">Impressum</a>
-          <a class="btn btn-outline-light border-none text-start">Datenschutz</a>
+          <a class="btn btn-outline-light border-none text-start" [routerLink]="'/about'">Partner</a>
+          <a class="btn btn-outline-light border-none text-start" [routerLink]="'/home/imprint'">Impressum</a>
+          <a class="btn btn-outline-light border-none text-start" [routerLink]="'/home/privacy-policy'">Datenschutz</a>
         </div>
       </div>
       <div class="col-12 col-md-4 text-center text-md-end">

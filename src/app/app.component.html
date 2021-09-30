@@ -29,7 +29,7 @@
 </div>
 <footer class="bg-dark text-white section__part--spacing">
   <div class="container">
-    <div class="row justify-content-center align-items-center">
+    <div *ngIf="false" class="row justify-content-center align-items-center">
       <div class="col-4 col-md-3 col-lg-2 text-center">
         <img class="img-fluid" src="/assets/images/urage-logo.png" alt="urage">
       </div>
@@ -61,4 +61,11 @@
       </div>
     </div>
   </div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-4 col-md-3 col-lg-2 text-center">
+      Eine Marke von
+      <a href="https://darkorigin.de" target="_blank"><img class="img-fluid" src="/assets/images/do-logo-h.png" alt="Dark Origin"></a>
+    </div>
+  </div>
+  <p class="text-center">Copyright 2020 - {{getYear()}} Dark Origin E-Sports und Entertainment GmbH. Alle Rechte vorbehalten.</p>
 </footer>

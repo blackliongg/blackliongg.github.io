@@ -17,4 +17,8 @@ export class AppComponent {
   scrollToTop(): void {
     this.viewportScroller.scrollToPosition([0,0]);
   }
+
+  getYear(): string {
+    return new Date().getFullYear().toString();
+  }
 }

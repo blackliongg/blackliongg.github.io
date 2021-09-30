@@ -29,7 +29,7 @@ export class AboutPageComponent implements OnInit, OnDestroy {
   }
 
   private static mailTo(): void {
-    window.open('mailto:info@darkorigin.de?cc=benjamin.schlotzhauer@darkorigin.de&subject=BLACK LION SPONSORING&body=');
+    window.open('mailto:info@darkorigin.de?cc=benjamin.schlotzhauer%40darkorigin.de&subject=BLACK+LION+SPONSORING&body=');
   }
 
   triggerMailTo() {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-talented-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TalentedPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
+  }
+
+  scrollTo(anchorId: string): void {
+    this.viewportScroller.scrollToAnchor(anchorId);
   }
 
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TalentedPageComponent } from './talented-page/talented-page.component';
 import {TalentedRoutingModule} from './talented-routing.module';
+import {SharedModule} from '../../shared/shared.module';
 
 
 
@@ -11,7 +12,8 @@ import {TalentedRoutingModule} from './talented-routing.module';
   ],
   imports: [
     CommonModule,
-    TalentedRoutingModule
+    TalentedRoutingModule,
+    SharedModule
   ]
 })
 export class TalentedModule { }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeroComponent } from './hero/hero.component';
 import { SectionComponent } from './section/section.component';
 import {RouterModule} from '@angular/router';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 
 
@@ -15,11 +16,13 @@ import {RouterModule} from '@angular/router';
     HeroComponent,
     SectionComponent,
     RouterModule,
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ]
 })
 export class SharedModule { }

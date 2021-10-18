@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NgcCookieConsentConfig, NgcCookieConsentModule} from 'ngx-cookieconsent';
 import {environment} from '../environments/environment';
+import {SharedModule} from './shared/shared.module';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -52,7 +53,8 @@ const cookieConfig: NgcCookieConsentConfig = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

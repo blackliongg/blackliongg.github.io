@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CommunityPageComponent } from './community-page/community-page.component';
 import {CommunityRoutingModule} from './community-routing.module';
+import {SharedModule} from '../../shared/shared.module';
 
 
 
@@ -11,7 +12,8 @@ import {CommunityRoutingModule} from './community-routing.module';
   ],
   imports: [
     CommonModule,
-    CommunityRoutingModule
+    CommunityRoutingModule,
+    SharedModule
   ]
 })
 export class CommunityModule { }

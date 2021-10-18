@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from './hero/hero.component';
 import { SectionComponent } from './section/section.component';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -12,10 +13,13 @@ import { SectionComponent } from './section/section.component';
   ],
   exports: [
     HeroComponent,
-    SectionComponent
+    SectionComponent,
+    RouterModule,
+    CommonModule
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

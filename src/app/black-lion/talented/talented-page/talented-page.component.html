@@ -58,8 +58,8 @@
             die Schulbildung im Fokus.
           </p>
           <div class="btn-group">
-            <a href="#" class="btn btn-dark">Bewirb dich jetzt!</a>
-            <a href="#" class="btn btn-outline-dark">Über uns</a>
+            <a (click)="triggerMailTo()" class="btn btn-dark">Bewirb dich jetzt!</a>
+            <a [routerLink]="'/about'" class="btn btn-outline-dark">Über uns</a>
           </div>
         </div>
       </div>
@@ -74,115 +74,193 @@
           <p>Wir fördern DICH und helfen DIR bei der Zieldefinition, im Training und zeigen dir worauf es ankommt. Desweiteren kannst DU einen Stammplatz in einem unserer Academy-Teams oder sogar im Profiteam ergattern. Überzeuge durch deine Persönlichkeit und Fähigkeiten. #BeTheLion
           </p>
         </div>
-        <div class="col-2 offset-1 d-none d-md-flex">
-          <div>
-            <a (click)="scrollTo('blunleashed')" class="btn btn-outline-quinary border-none fw-bold">Black Lion Unleashed</a>
-            <a (click)="scrollTo('blu18')"  class="btn btn-outline-quinary border-none fw-bold">Black Lion U18</a>
+        <div class="col-12 col-md-3">
+          <h2>Teams</h2>
+          <div class="btn-group-vertical">
+            <a (click)="scrollTo('blu21')" class="btn btn-outline-quinary border-none fw-bold">Black Lion U21</a>
+            <a (click)="scrollTo('blu20')" class="btn btn-outline-quinary border-none fw-bold">Black Lion U20</a>
+            <a (click)="scrollTo('blu18')" class="btn btn-outline-quinary border-none fw-bold">Black Lion U18</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <app-section [id]="'blunleashed'" [wrapperCssClasses]="['progaming__section', 'section--spacing', 'bg-pattern-quinary']">
-    <h2 class="display-4">Black Lion Unleashed</h2>
+  <app-section [id]="'blu21'" [wrapperCssClasses]="['progaming__section', 'section--spacing', 'bg-pattern-quinary']">
+    <h2 class="display-4">Black Lion U21</h2>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
         <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Top_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
+          <div class="card-img-top">
+            <img class="img-fluid" src="/assets/images/Rhyno.jpeg" alt="...">
           </div>
           <div class="card-img-overlay">
             <div class="player__role">
-              <img src="/assets/images/BlackLion_Role_Icons_Top.png"
-                style="width: 60px"
-                alt="Obelisk Toplane">
+              <img src="/assets/images/BlackLion_Role_Icons_Top.png" alt="Rhyno Toplane">
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Obelisk</h5>
+            <h5 class="card-title">Rhyno</h5>
             <h6 class="card-subtitle text-tertiary">Toplane</h6>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
         <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Jungle_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
+          <div class="card-img-top">
+            <img class="img-fluid" src="/assets/images/Rebanto.jpeg" alt="...">
           </div>
           <div class="card-img-overlay">
             <div class="player__role">
-              <img src="/assets/images/BlackLion_Role_Icons_Jungle.png"
-                style="width: 60px"
-                alt="Viper Jungle">
+              <img src="/assets/images/BlackLion_Role_Icons_Jungle.png" alt="Rebanto Jungle">
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Viper</h5>
+            <h5 class="card-title">Rebanto</h5>
             <h6 class="card-subtitle text-tertiary">Jungle</h6>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
         <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Mid_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
+          <div class="card-img-top">
+            <img class="img-fluid" src="/assets/images/TomiJ.jpeg" alt="...">
           </div>
           <div class="card-img-overlay">
             <div class="player__role">
-              <img src="/assets/images/BlackLion_Role_Icons_Mid.png"
-                style="width: 60px"
-                alt="Ryoshi Midlane">
+              <img src="/assets/images/BlackLion_Role_Icons_Mid.png" alt="TomiJ Midlane">
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Ryoshi</h5>
+            <h5 class="card-title">TomiJ</h5>
             <h6 class="card-subtitle text-tertiary">Midlane</h6>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
         <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_ADC_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
+          <div class="card-img-top">
+            <img class="img-fluid" src="/assets/images/Bulbasur.jpeg" alt="...">
           </div>
           <div class="card-img-overlay">
             <div class="player__role">
-              <img src="/assets/images/BlackLion_Role_Icons_ADC.png"
-                style="width: 60px"
-                alt="Alex ADC">
+              <img src="/assets/images/BlackLion_Role_Icons_ADC.png" alt="Bulbasur ADC">
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Alex</h5>
+            <h5 class="card-title">Bulbasur</h5>
             <h6 class="card-subtitle text-tertiary">ADC</h6>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
         <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Sup_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
+          <div class="card-img-top">
+            <img class="img-fluid" src="/assets/images/NebeL.jpeg" alt="...">
           </div>
           <div class="card-img-overlay">
             <div class="player__role">
-              <img src="/assets/images/BlackLion_Role_Icons_Sup.png"
-                style="width: 60px"
-                alt="Alex ADC">
+              <img src="/assets/images/BlackLion_Role_Icons_Sup.png" alt="nebeL Support">
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Sorex</h5>
-            <h6 class="card-subtitle text-tertiary">Sup</h6>
+            <h5 class="card-title">nebeL</h5>
+            <h6 class="card-subtitle text-tertiary">Support</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card">
+          <div class="card-img-top">
+            <img class="img-fluid" src="/assets/images/gVio.jpeg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">gVio</h5>
+            <h6 class="card-subtitle text-tertiary">Sub</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-8">
+              <h5 class="card-title">Turtle</h5>
+              <h6 class="card-subtitle text-tertiary">Coach</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-section>
+  <app-section [id]="'blu20'" [wrapperCssClasses]="['progaming__section', 'section--spacing', 'bg-quinary']">
+    <h2 class="display-4">Black Lion U20</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
+              <img src="/assets/images/BlackLion_Role_Icons_Top.png"
+                alt="squan Toplane" class="img-fluid">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">squan</h5>
+              <h6 class="card-subtitle text-tertiary">Toplane</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
+              <img src="/assets/images/BlackLion_Role_Icons_Jungle.png"
+                alt="Sentherus Jungle" class="img-fluid">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">Sentherus</h5>
+              <h6 class="card-subtitle text-tertiary">Jungle</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
+              <img src="/assets/images/BlackLion_Role_Icons_Mid.png"
+                alt="Humnam Mid" class="img-fluid">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">Humnam</h5>
+              <h6 class="card-subtitle text-tertiary">Mid</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
+              <img src="/assets/images/BlackLion_Role_Icons_ADC.png"
+                alt="Kyubeti sama ADC" class="img-fluid">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">Kyubeti sama</h5>
+              <h6 class="card-subtitle text-tertiary">ADC</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
+              <img src="/assets/images/BlackLion_Role_Icons_Sup.png"
+                alt="Cocatee Support" class="img-fluid">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">Cocatee</h5>
+              <h6 class="card-subtitle text-tertiary">Support</h6>
+            </div>
           </div>
         </div>
       </div>
@@ -192,102 +270,92 @@
     <h2 class="display-4">Black Lion U18</h2>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
-        <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Top_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
-          </div>
-          <div class="card-img-overlay">
-            <div class="player__role">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
               <img src="/assets/images/BlackLion_Role_Icons_Top.png"
-                style="width: 60px"
-                alt="Obelisk Toplane">
+                alt="rexzeon Toplane" class="img-fluid">
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Obelisk</h5>
-            <h6 class="card-subtitle text-tertiary">Toplane</h6>
+            <div class="col-8">
+              <h5 class="card-title">rexzeon</h5>
+              <h6 class="card-subtitle text-tertiary">Toplane</h6>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
-        <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Jungle_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
-          </div>
-          <div class="card-img-overlay">
-            <div class="player__role">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
               <img src="/assets/images/BlackLion_Role_Icons_Jungle.png"
-                style="width: 60px"
-                alt="Viper Jungle">
+                alt="ŚQP Jungle" class="img-fluid">
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Viper</h5>
-            <h6 class="card-subtitle text-tertiary">Jungle</h6>
+            <div class="col-8">
+              <h5 class="card-title">ŚQP</h5>
+              <h6 class="card-subtitle text-tertiary">Jungle</h6>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
-        <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Mid_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
-          </div>
-          <div class="card-img-overlay">
-            <div class="player__role">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
               <img src="/assets/images/BlackLion_Role_Icons_Mid.png"
-                style="width: 60px"
-                alt="Ryoshi Midlane">
+                alt="Mayblis Mid" class="img-fluid">
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Ryoshi</h5>
-            <h6 class="card-subtitle text-tertiary">Midlane</h6>
+            <div class="col-8">
+              <h5 class="card-title">Mayblis</h5>
+              <h6 class="card-subtitle text-tertiary">Mid</h6>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
-        <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_ADC_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
-          </div>
-          <div class="card-img-overlay">
-            <div class="player__role">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
               <img src="/assets/images/BlackLion_Role_Icons_ADC.png"
-                style="width: 60px"
-                alt="Alex ADC">
+                alt="Maro ADC" class="img-fluid">
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Alex</h5>
-            <h6 class="card-subtitle text-tertiary">ADC</h6>
+            <div class="col-8">
+              <h5 class="card-title">Maro</h5>
+              <h6 class="card-subtitle text-tertiary">ADC</h6>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
-        <div class="card">
-          <div class="card-img-top"
-            style="background: url('/assets/images/BlackLion_Pattern_Sup_red.png') repeat; background-size: 200px;"
-          >
-            <img src="https://fazeclan.com/images/player-sileutte.svg" alt="...">
-          </div>
-          <div class="card-img-overlay">
-            <div class="player__role">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-4">
               <img src="/assets/images/BlackLion_Role_Icons_Sup.png"
-                style="width: 60px"
-                alt="Alex ADC">
+                alt="AIOsna Support" class="img-fluid">
+            </div>
+            <div class="col-8">
+              <h5 class="card-title">AIOsna</h5>
+              <h6 class="card-subtitle text-tertiary">Support</h6>
             </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Sorex</h5>
-            <h6 class="card-subtitle text-tertiary">Sup</h6>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-8">
+              <h5 class="card-title">Haze</h5>
+              <h6 class="card-subtitle text-tertiary">Coach</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 section__part--spacing">
+        <div class="card-body bg-dark">
+          <div class="row align-content-center">
+            <div class="col-8">
+              <h5 class="card-title">ATangerine</h5>
+              <h6 class="card-subtitle text-tertiary">Coach</h6>
+            </div>
           </div>
         </div>
       </div>

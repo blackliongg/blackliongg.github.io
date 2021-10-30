@@ -1,1 +1,2 @@
 User-agent: *
+Sitemap: https://black-lion.gg/sitemap.xml

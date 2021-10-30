@@ -5,7 +5,7 @@
       "source": "docs/index.html",
       "target": "docs/index.html",
       "var": {
-        "title": "Black Lion",
+        "title": "Diverse Esports: Black Lion",
         "microdata": "src/app/black-lion/microdata/home.html"
       }
     },
@@ -21,7 +21,7 @@
       "source": "docs/index.html",
       "target": "docs/progaming.html",
       "var": {
-        "title": "Progaming at Black Lion",
+        "title": "Progaming bei Black Lion",
         "microdata": "src/app/black-lion/microdata/progaming.html"
       }
     },
@@ -29,7 +29,7 @@
       "source": "docs/index.html",
       "target": "docs/community.html",
       "var": {
-        "title": "RoarTogether - The Black Lion Community",
+        "title": "#UnleashUrLion - Die Black Lion Community",
         "microdata": "src/app/black-lion/microdata/community.html"
       }
     },
@@ -37,7 +37,7 @@
       "source": "docs/index.html",
       "target": "docs/about.html",
       "var": {
-        "title": "About Black Lion",
+        "title": "Über Black Lion",
         "microdata": "src/app/black-lion/microdata/about.html"
       }
     },
@@ -45,7 +45,7 @@
       "source": "docs/index.html",
       "target": "docs/talented.html",
       "var": {
-        "title": "UnleashUrLion - The Black Lion youngster program",
+        "title": "Der Nachwuchs und das Leistungszentrum bei Black Lion",
         "microdata": "src/app/black-lion/microdata/talented.html"
       }
     },

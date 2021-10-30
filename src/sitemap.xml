@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//backlinko.com/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://black-lion.gg/</loc>
+    <lastmod>2019-02-25T14:27:51+00:00</lastmod>
+    <image:image>
+      <image:loc>
+        https://black-lion.gg/assets/images/BlackLion_Logo_black_brush_tagline.png
+      </image:loc>
+      <image:title><![CDATA[How to Get Traffic from YouTube in 2019]]></image:title>
+      <image:license>https://black-lion.gg/</image:license>
+      <image:caption>How to Get Traffic from YouTube in 2019</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://black-lion.gg/progaming</loc>
+    <lastmod>2019-02-25T14:27:51+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://black-lion.gg/talented</loc>
+    <lastmod>2019-02-25T14:27:51+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://black-lion.gg/community</loc>
+    <lastmod>2019-02-25T14:27:51+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://black-lion.gg/about</loc>
+    <lastmod>2019-02-25T14:27:51+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://black-lion.gg/privacy-policy</loc>
+    <lastmod>2019-02-25T14:27:51+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://black-lion.gg/imprint</loc>
+    <lastmod>2019-02-25T14:27:51+00:00</lastmod>
+  </url>
+</urlset>

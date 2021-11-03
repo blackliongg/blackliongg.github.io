@@ -1,9 +1,8 @@
 export const environment = {
   production: true,
   protocol: 'https',
-  domain: 'blackliongg-60780.web.app',
+  domain: 'black-lion.gg',
   cookieConsent: {
-    //cookieDomain: 'black-lion.de'
-    cookieDomain: 'blackliongg-60780.web.app'
+    cookieDomain: 'black-lion.gg'
   }
 };
